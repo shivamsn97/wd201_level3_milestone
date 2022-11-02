@@ -43,7 +43,7 @@ const todoList = () => {
       list.forEach(item => {
         OUTPUT_STRING += `[${item.completed ? "x" : " "}] ${item.title} ${item.dueDate === formattedDate(new Date()) ? "" : item.dueDate}\n`
         })
-      return OUTPUT_STRING
+      return OUTPUT_STRING.trim()
     }
   
     return { all, add, markAsComplete, overdue, dueToday, dueLater, toDisplayableList };
